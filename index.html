@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Wanna go out with me...??</title>
+        <style>
+            body{
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                font-family: "poppins";
+                background-color: #ffc0fd;
+            }
+            #div{
+                position: relative;
+                top: 160px;
+            }
+            #yesbtn,#nobtn{
+                text-decoration: none;
+                font-size: 20px;
+                margin: 5px;
+                background-color:  #F92D47;
+                color: white;
+                padding: 6px;
+                border-radius: 6px;
+                border-color: #F92D47;
+            }
+            #yesbtn a{
+                text-decoration: none;
+                color: white;
+            }
+            #yesbtn:hover,button:hover{
+                transition: 0.1s;
+                box-shadow: 1px 1px 5px  black , -1px 1px 5px black;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="div">
+        <!-- <h1>Wanna go out with me...??</h1> -->
+        <h2>You and me and a beautiful evening...!! <br>What are your thoughts?</h2>
+        <!-- <h1>Will you be my girlfriend?</h1> -->
+        <img src="assets/peach-goma-peach-and-goma (1).gif" id="gif1" alt="cute gif of pleading">
+        <br>
+        <a href="index1.html"><button type="button" id="yesbtn">YES</button></a>
+        <button type="button" id="nobtn" onclick="dontsayno()">NO</button>
+
+        <video controls loop preload playsinline height="0px" width="0px">
+            <source src="assets/Kabhi Kabhi Aditi Zindagi WhatsApp Status _ Kabhi Kabhi Aditi Aesthetic WhatsApp Status - Lyrics.mp4" type="video/mp4" >
+        </video>
+    </div>
+        <script>
+            var arr = ["Don't click me...!!🥹", 
+                "Pleasse say Yes....!! :(",
+                "Are you sure?😿",
+                "Really sure?😒", 
+                "Think again....!!🤦‍♂️",
+                "Last chance....!!🤷‍♂️", 
+                "Surely not?😿",
+                "You might regret this...!!😏😏",
+                "Give it another thought...!!🙂🙂",
+                "Think again..!!🙃",
+                "This could be a mistake...!!😕😕",
+                "Have a heart...!!😪", 
+                "Don't be so cold...!!😿😿", 
+                "Change of heart?😘", 
+                "Is that your final answer?😿", 
+                "Your are breaking my heart :(", 
+                "Giving you another chance.. click yes...!!😍"];
+            var i=0;
+            var initialbtnsize = 10;
+            var initialfontsize = 10;
+            function dontsayno(){
+                let nbutton = document.getElementById("nobtn");
+                nbutton.innerHTML = arr[i];
+                i++;
+                if(i>=arr.length){
+                    i=0;
+                }
+                
+                let ybutton = document.getElementById("yesbtn");
+                initialbtnsize = initialbtnsize+10;
+                ybutton.style.padding = initialbtnsize + "px";
+
+                initialfontsize = initialfontsize + 10;
+                ybutton.style.fontSize = initialfontsize + "px"        
+                    
+            }
+
+            document.getElementById("nobtn").addEventListener("click", () => {
+                document.querySelector('video').play();
+            })    
+        </script>
+    </body>
+</html>
